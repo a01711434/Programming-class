@@ -1,6 +1,8 @@
 # Programming-class
 Repositorio para almacenar los ejercicios y ejemplos de la clase de "Pensamiento Computacional para Ingeniería" Semestre AD23
 
+<![endif]-->
+
 **Tema del Proyecto:**
 
 Mi idea de proyecto se basa en que las personas van a acudir a él para preguntarle por una mejor rutina de skincare, de cabello y de qué pueden hacer para mantener una buena alimentación dependiendo de su tipo de piel, de la forma que quieren tener su cabello y de cual es el goal qué tienen para su alimentación.
@@ -35,8 +37,6 @@ A mi se me hace interesante esto debido a que varias mujeres en especial adolesc
 		While terminos==y:
 			imprimir definición de skincare y de cuidados del cabello
 		
-		
-
 		Si quiere saber de 1:
 		
 			Mientras quiera preguntar sobre cara o cuerpo:

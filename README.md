@@ -17,7 +17,7 @@ A mi se me hace interesante esto debido a que varias mujeres en especial adolesc
 	Preguntar por la edad de la persona:
 	while edad <= 25:
 		resta= 25 - edad
-		print ("Todavía no es tarde para cuidar tu piel o tu cabello, te faltan",resta)
+		print ("Todavía no es tarde para cuidar tu piel o tu cabello, te faltan",resta, "para llegar a los 25, esa es la edad cuando la piel empieza a envejecer :( .")
 	else:
 		print("Esperamos poder ayudarte con algo para el cuidado de tu cuerpo")
 	

@@ -1,0 +1,179 @@
+	import  tkinter  as  tk
+	import  time
+	from  os  import  system
+	system("cls")
+	#S=skincare, CC=cuidado del cabello
+	skincare='S'
+	Cuidados_cabello='CC'
+	#A=si y B=NO
+	A='si'
+	B='no'
+	#a=cara, b=cuerpo,
+	cara='a'
+	cuerpo='b'
+	##Lista de la c=acné,d=rosácea,e)hidratación,f=exfoliación,g=rejuvecimiento
+	c='acné'
+	d='rosácea'
+	e='hidratación'
+	f='exfoliación'
+	g='rejuvecimiento'
+
+  
+
+#Introducción al programa, pedir nombre y edad
+
+	print("Hola me llamo Belleza de Gangnam, es un placer conocerte.\n¿Con quién tengo el placer? ")
+
+	nombre=(input(""))
+	print("\nHola",nombre,",es un placer estar contigo.")
+
+	time.sleep (2)
+
+	system ("cls")
+
+	edad=int(input("Me puedes decir tu edad: "))
+
+	time.sleep(1)
+
+  
+
+	resta=  25  -  edad
+
+	dias=  edad*365
+
+	minutos=  dias*1440
+
+  
+
+	if  edad  <  25:
+
+		print("Eres alguien joven, espero que te podamos ayudar en algo",nombre,\
+
+		"\nDesde que naciste ha pasado,",dias,"días"\
+
+		"\nUn dato importante es que necesitamos solamente 30 minutos diarios para obtener la dosis diaria de vitamina D\
+
+		\nPor lo que si estamos expuestos al sol por más de 30 minutos diarios.\
+
+		\nPor ejemplo 4 horas diarias. Een",edad,"años en minutos es",minutos,\
+
+		"\nPor lo que eso es extremadamente dañino"\
+
+		"\nSi nunca te has puesto bloqueador es hora de empezar.\
+
+		\nDebido a que es muy dañino para la piel\
+
+		y puedes desarrollar cáncer de piel")
+
+		time.sleep(23)
+
+		system("cls")
+
+  
+
+	else:
+
+		print("Esperamos poder ayudarte con algo para el cuidado de tu piel y tu cabello\
+
+		\nDesde que naciste ha pasado.",dias,"días."\
+
+		"\nNecesitamos solamente 30 minutos diarios\
+
+		para obtener la dosis diaria de vitamina D;\
+
+		por lo que si estamos expuestos al sol por más de 30 minutos diarios\
+
+		por ejemplo 4 horas diarias, en",edad,"años en minutos es",minutos,\
+
+		"por lo que eso es extremadamente dañino"\
+
+		"\nSi nunca te has puesto bloqueador es hora de empezar.")
+
+		time.sleep(4)
+
+		system("cls")
+
+  
+
+#Enlistado de las opciones de los temas que maneja el programa: si o no
+
+	print("Pero antes de pasar a la información\
+
+	\n¿Te gustaría una breve definición de skincare y de cuidado del cabello?")
+
+	pregunta=input("si o no: ")
+
+	time.sleep(3)
+
+	system("cls")
+
+  
+
+	if  pregunta  ==  A:
+
+		print("Skincare es el cuidado que le damos a nuestra piel para mantenerla saludable.\
+
+		\nSe asocia con las rutinas que seguimos y los productos que usamos\
+
+		\nPara que la piel de nuestro rostro o cuerpo luzca fresca y sana.\
+
+		\n\nEl cuidado del cabello son cuidados que se aplican al cabello.\
+
+		\nSu finalidad es mantener la salud y buena apariencia del mismo.")
+
+		time.sleep(12)
+
+		system("cls")
+
+  
+
+			print("¿De que tema quieres saber?")
+
+			lista=input("\tSkincare\n\tCuidados del cabello\
+
+			\nPon para skincare S o para cuidados del cabello CC: ")
+
+			time.sleep(3)
+
+			system("cls")
+
+  
+
+				if  lista==  skincare:
+
+				#Preguntar si quiere saber sobre a=cara o b=cuerpo
+
+				lista2=input("\n¿De qué quieres saber?\
+
+				\n\ta)cara\n\tb)cuerpo\
+
+				\n ")
+
+				time.sleep(4)
+
+				system("cls")
+
+  
+
+					if  lista2==cara:
+
+					#Lista de la c=acné,d=rosácea,e)hidratación,f=exfoliación,g=rejuvecimiento
+
+					trata=input("\n¿Quiéres saber sobre?\
+
+					\nc)acné\nd)rosácea\ne)hidratación\nf)exfoliación\ng)rejuvecimiento facial\
+
+					\n¿Cuál es tu elección?")
+
+					time.sleep(4)
+
+					system("cls")
+
+						if  trata==c:
+
+						print("El acé es")
+
+  
+  
+
+#print("bibliografías:\nhttps://nudaest.com/blogs/blog/skin-care-que-es-y-sus-rutinas#uno\n")

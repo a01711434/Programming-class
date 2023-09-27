@@ -799,9 +799,8 @@ def main():
 
     while True:        
             show_error="show error"   
-            if show_error:
+            if show_error==True:
                 print("Debes contestar con las opciones anteriores")
-                show_error= False
             lista=input("¿De qué tema quieres saber?\n-skincare\n-cuidados del cabello\n").lower()
             print("De acuerdo")
             time.sleep(3)
@@ -809,11 +808,8 @@ def main():
 
             while True: 
                 if lista== skincare:
-                    menu_principal=menu_principal
-                    show_error==False
                     #Preguntar si quiere saber sobre a=cara o b=cuerpo
-                      
-                    if show_error:
+                    if show_error==True:
                         print("Debes de contestar con las opciones anteriores")
                     print("¿De qué tema quieres saber?\n-cara\n-cuerpo\nSi quieres regresar a menu principal pon 'menu principal'")
                     print("Si quieres salir del cóidigo pon 'salir'")
@@ -883,7 +879,7 @@ def main():
                             show_error=False
                             break
 
-                    elif lista2==menu_principal:
+                    elif lista2=="menuprincipal":
                         break
 
                     else:
@@ -922,5 +918,4 @@ main()
 #https://www.materialestetica.com/blog/es/tipos-depilacion/
 #https://www.niddk.nih.gov/health-information/informacion-de-la-salud/control-de-peso/alimentacion-saludable-actividad-fisica-vida
 #https://www.institutotomaspascualsanz.com/importancia-de-un-descanso-adecuado-para-la-salud/
-
 

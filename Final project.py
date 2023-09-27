@@ -1,9 +1,8 @@
-	
+
 import time
 import os 
 import random
 numero=random.randint(1,100)
-
 
 #S=skincare, CC=cuidado del cabello
 skincare="skincare" 
@@ -513,18 +512,20 @@ pueden contribuir a una piel con mejor aspecto. Fumar, en particular, puede acel
                     continue
                 break
         break
-def cuerpo_info():
-    while True:
-        
-        print("El cuidado corporal se refiere a las prácticas y rutinas que una persona realiza para mantener la salud y el bienestar\
-de su cuerpo, especialmente la piel y otras partes externas.\nExisten algunas prácticas comunes del cuidado corporal. ¿Te gustaría saberlas? ")
-        time.sleep(6)
-        limpiar_pantalla()
+def cuerpo_info():    
+    print("El cuidado corporal se refiere a las prácticas y rutinas que una persona realiza para mantener la salud y el bienestar\
+de su cuerpo, especialmente la piel y otras partes externas.\nExisten algunas prácticas comunes del cuidado corporal.")
+    time.sleep(6)
+    limpiar_pantalla()
+    while True: 
         practicas_comunes=str(input("Las prácticas comunes son:\nHigiene Personal\nExfoliación\nHidratación\nProtección Solar\nCuidado de las uñas\
-        \nCuidado de los pies\nDepilación\nNutrición y ejercicio\nDescanso adecuado\n¿Cuál eliges?: ")).lower()
+        \nCuidado de los pies\nDepilación\nNutrición y ejercicio\nDescanso adecuado\nSi no quieres saber de ninguno pon 'no'.\n¿Cuál eliges?: ")).lower()
         time.sleep(2)
         limpiar_pantalla()
-        if practicas_comunes== "higiene personal":
+        if practicas_comunes==no:
+            esta_bien()
+            break
+        elif practicas_comunes== "higiene personal":
             print("El cuidado corporal comienza con la higiene personal diaria. Esto incluye tomar baños o duchas regulares para mantener la piel limpia y\
 libre de suciedad y sudor. El uso de jabón suave y agua tibia es esencial para no eliminar los aceites naturales de la piel.\
 \nOtro factor que va a ayudar mucho al lavado de todas las áreas del cuerpo de una persona, es el cambio y el lavado de las ropas de forma periódica,\
@@ -532,14 +533,16 @@ además del uso de las prendas de vestir y tener los mismos, muy limpios y tambi
 \nLos Objetivos de la Higiene Personal, son las conservación y la prevención de las infecciones y de las enfermedades, como también el mejorar la salud física de una persona.")
             time.sleep(20)
             limpiar_pantalla()
+            continue
         elif practicas_comunes=="exfoliación":
             print(" La exfoliación se refiere a la eliminación de células muertas de la piel. Puedes hacerlo utilizando exfoliantes suaves o cepillos corporales.\
             \nLa exfoliación regular puede ayudar a mantener la piel suave y renovada.\nEsta técnica del peeling corporal puede realizarse tanto en invierno como en verano.\
-            \nY según el tipo de piel y de producto específico utilizado, se puede exfoliar de dos a tres veces por semana. Una buena forma de aplicarlo es en la ducha, sobre la piel mojada, con una manopla o con las propias manos.\
+            \nY según el tipo de piel y de producto específico utilizado, se puede exfoliar de dos a tres veces por semana. Una buena forma de aplicarlo es en la ducha, sobre la piel mojada, con una manopla o con\nlas propias manos.\
             \nSe deben realizar movimientos suaves, en sentido circular y ascendentes. Y al finalizar el tratamiento, hay que aclarar con agua tibia y terminar con agua más fría.\
             \nEste proceso no es doloroso ya que consiste en exfoliar la capa más superficial de la piel con la finalidad de eliminar las estrías, cicatrices, acné o cualquier tipo de imperfecciones.")
             time.sleep(25)
             limpiar_pantalla()
+            continue
         elif practicas_comunes=="hidratación":
             print("Es importante mantener la piel hidratada para prevenir la sequedad y la descamación. Usar lociones o cremas hidratantes después de la ducha puede ayudar a retener la humedad en la piel.\
             \nMantener una correcta hidratación es fundamental para nuestro bienestar.\
@@ -547,9 +550,12 @@ además del uso de las prendas de vestir y tener los mismos, muy limpios y tambi
             \nDe esta forma, explican que, para mantener una buena salud no sólo es importante la dieta correcta, sino una adecuada hidratación del cuerpo, dependiendo del peso, talla, edad y temporada de año.")
             time.sleep(16)
             limpiar_pantalla()
+            continue
         elif practicas_comunes=="protección solar":
             print("Todos los días, tu piel está expuesta a la radiación ultravioleta del sol y está potencialmente sometida a sus múltiples daños: quemaduras solares, envejecimiento y, lo más importante, cáncer de piel.\
             \nLa protección contra los daños causados por el sol es crucial. El uso de protector solar antes de exponerse al sol ayuda a prevenir el envejecimiento prematuro de la piel y reduce el riesgo de cáncer de piel.")
+            time.sleep(15)
+            limpiar_pantalla()
             while True:
                 definicion_protector_solar=str(input("¿Quiéres saber que es el protector solar?\nRespuesta si o no: ")).lower()
                 if definicion_protector_solar==no:
@@ -563,14 +569,17 @@ además del uso de las prendas de vestir y tener los mismos, muy limpios y tambi
 los primeros son los causantes de las quemaduras en la piel, mientras que los segundos ocasionan la pérdida de elasticidad, arrugas y otros efectos relacionados al fotoenvejecimiento.")  
                     time.sleep(19)
                     limpiar_pantalla()
+                    break
                 else: 
                     print("Debes contestar con si o no")
                     continue
-                break
+            continue
+                
         elif practicas_comunes=="cuidado de las uñas":
             print("Mantener las uñas limpias y recortadas es parte del cuidado corporal. También puedes aplicar esmalte de uñas si lo deseas.")
             time.sleep(5)
             limpiar_pantalla()
+            continue
         elif practicas_comunes=="cuidado de los pies":
             print("El cuidado de los pies implica mantenerlos limpios, recortar las uñas de los pies y usar calzado adecuado para prevenir problemas como los hongos en las uñas o los callos.\
             \nEn muchos sitios se ofrecen servicios de pedicura, tratamientos cosméticos embellecedores y hasta sesiones de masajes exclusivamente para los pies.\
@@ -592,12 +601,13 @@ los primeros son los causantes de las quemaduras en la piel, mientras que los se
                     print (lista_pies)
                     time.sleep(7)
                     limpiar_pantalla()
+                    break
                 else:
                     print("Debes contestar con si o no ")
                     time.sleep(2)
                     limpiar_pantalla()
                     continue
-                break
+            continue
         elif practicas_comunes=="depilación":
             print(" Algunas personas también incluyen el cuidado del cabello corporal en su rutina de cuidado corporal. Esto puede incluir el afeitado o depilación de ciertas áreas del cuerpo.\
             \nExisten varios tipos de serviciós en los centros de estética. Por alta demando, en el séctor se han ido desarrollando métodos más eficaces e indoloros\
@@ -616,35 +626,41 @@ para eliminar eficazmente el vello de cualquier parte del cuerpo. Existen 8 tipo
                     limpiar_pantalla()
                     break
                 elif tipos_depilación==si:
-                    cual_depilación=str(input("¿Acerca de cuál quieres saber?:\n")).lower()
                     print(depilación_lista)
+                    time.sleep(6)
+                    cual_depilación=str(input("¿Acerca de cuál quieres saber?:\n")).lower() 
                     limpiar_pantalla()
                     if cual_depilación=="con cuchilla":
                         print("Es el método más utilizado, el más rápido y sencillo para eliminar el vello de cualquier parte del cuerpo. Puedes realizarlo cómodamente en casa.\
                         \nPero tiene el inconveniente de que el pelo no se arranca de raíz, por lo que crece en un breve plazo de tiempo.")
                         time.sleep(9)
                         limpiar_pantalla()
+                        break
                     elif cual_depilación=="con cera":
                         print("Es uno de los métodos más tradicionales. Se sigue usando por su coste más económico y porque es una técnica duradera y rápida. Se adapta muy bien a cualquier parte del cuerpo.\
                         \nPero este tipo de depilación cada vez está siendo menos demandado debido a las técnicas más nuevas que están apareciendo en el mercado, menos dolorosas y más efectivas.\
                         \nExisten varios tipos de depilación a la cera: fría, caliente o tibia.")
                         time.sleep(7)
                         limpiar_pantalla()
+                        break
                     elif cual_depilación=="con crema":
                         print("su efectividad en bastante pobre, pues el pelo se rasura, no se arranca de raíz, de manera que crece en 2 o 3 días.\
                         \nPosee la ventaja de que es totalmente indoloro y no irritan la piel. Su uso es muy sencillo: extender la crema sobre la zona a tratar, dejarla actuar un tiempo y retirar con una espátula.")
                         time.sleep(7)
                         limpiar_pantalla()
+                        break
                     elif cual_depilación=="con hilo":
                         print("Este método es más recomendado para las zonas faciales (bigote, cejas, mentón…), pues muy idóneo para perfilar y definir.\
                         Es rápido, poco doloroso y muy eficaz. Pero no vale para zonas más grandes, por una cuestión de tiempo y paciencia…")
                         time.sleep(7)
                         limpiar_pantalla()
+                        break
                     elif cual_depilación=="con aparatos mecánicos":
                         print("Las maquinillas eléctricas son un tipo de depilación muy habitual en las casas, pues es cómodo de usar, duradero y rápido.\
                             \nPero como contra, es bastante doloroso y tiende a producir problemas con el vello enconado.")
                         time.sleep(7)
                         limpiar_pantalla()
+                        break
                     elif cual_depilación=="con láser":
                         print("Este es el tipo de depilación más popular y demandado actualmente.\
                         \nSu principal ventaja es su eficacia pues es una manera definitiva de eliminar el vello.\
@@ -652,31 +668,36 @@ para eliminar eficazmente el vello de cualquier parte del cuerpo. Existen 8 tipo
                         \nEl coste es mayor, pero su eficacia y resultados inigualables.")
                         time.sleep(7)
                         limpiar_pantalla()
+                        break
                     elif cual_depilación=="luz pulsada":
                         print("Esta depilación es similar al láser en que también es totalmente definitiva.\
-                                \nTiene la ventaja añadida de que es eficaz para todo tipo de piel (el láser funciona mejor en pieles más oscuras).\
+                            \nTiene la ventaja añadida de que es eficaz para todo tipo de piel (el láser funciona mejor en pieles más oscuras).\
                             \nDe igual manera el coste es más alto, pero es totalmente definitivo, lo que supone una ventaja importante.\
                             \nEs el adiós definitivo.")
                         time.sleep(15)
                         limpiar_pantalla()
+                        break
                     elif cual_depilación=="termoquímica":
                         print("La depilación termoquímica es un tipo de depilación sin dolor y muy efectiva. Es bastante desconocida.\
                                 \nConsiste en aplicar un elemento químico que hace reacción al calor, destruyendo la raíz del vello.")
+                        time.sleep(6)
+                        limpiar_pantalla()
+                        break
                     else:
                         print("Debes elegir una de las opciones anteriores")
                         continue
-                    break
                 else:
                     print("Debes elegir si o no")
                     continue
-                break
+            continue   
         elif practicas_comunes=="nutrición y ejercicio":
             print("Una parte esencial del cuidado corporal es mantener una dieta equilibrada y hacer ejercicio regularmente.\
             \nEsto no solo beneficia a tu piel, sino a tu salud en general.\nEl consumo de alimentos y bebidas saludables,\
 junto con el ejercicio físico regular, podría ayudarle a lograr y mantener un peso que sea adecuado para usted. Mantener ese peso,\
-dormir bien y controlar el estrés también podrían ayudarle a evitar algunos problemas de salud.")
+ dormir bien y controlar \nel estrés también podrían ayudarle a evitar algunos problemas de salud.")
             time.sleep(20)
             limpiar_pantalla()
+            continue
         elif practicas_comunes=="descanso adecuado":
             print("El sueño adecuado es esencial para el cuidado corporal. Un buen descanso permite que la piel se repare y regenere.\
             \nLas horas que debemos dedicar a este descanso varían en función de la edad.\
@@ -685,6 +706,7 @@ dormir bien y controlar el estrés también podrían ayudarle a evitar algunos p
 de sueño y, siempre que sea posible, mantenerlo también los fines de semana.")
             time.sleep(24)
             limpiar_pantalla()
+            continue
         else: 
             print("Debes elegir una de las opciones anteriores")
             continue
@@ -713,10 +735,11 @@ def cuidado_cabello_info():
                     \nEvitar el uso excesivo de calor y productos químicos agresivos es esencial para mantener la salud del cabello rizado.")
                 else:
                     print("Debes elegir si o no")
+                    continue
             while True:
                 estilismo_rizado=str(input("¿Quiéres saber sobre el peinado y estilismo?\nRespuesta si o no: ")).lower()
                 if estilismo_rizado==no:
-                    esta_bien
+                    esta_bien()
                     time.sleep(2)
                     limpiar_pantalla()
                     break
@@ -740,7 +763,7 @@ def main():
     time.sleep (2)
     limpiar_pantalla()
 
-    print("Espero que te podamos ayudar en algo",nombre)
+    print(f"Espero que te podamos ayudar en algo {nombre}")
     time.sleep(5)
     limpiar_pantalla()
 
@@ -774,10 +797,7 @@ def main():
             continue
         
 
-    while True:
-        
-        menu_principal = "menu principal"
-        if menu_principal == "menu principal":
+    while True:        
             show_error="show error"   
             if show_error:
                 print("Debes contestar con las opciones anteriores")
@@ -792,82 +812,85 @@ def main():
                     menu_principal=menu_principal
                     show_error==False
                     #Preguntar si quiere saber sobre a=cara o b=cuerpo
+                      
+                    if show_error:
+                        print("Debes de contestar con las opciones anteriores")
+                    print("¿De qué tema quieres saber?\n-cara\n-cuerpo\nSi quieres regresar a menu principal pon 'menu principal'")
+                    print("Si quieres salir del cóidigo pon 'salir'")
+                    lista2=input("Respuesta: ").lower()
+                    time.sleep(4)
+                    limpiar_pantalla()
                     
-                    while True:
-                        submenu="sub menu"
-                        if submenu=="sub menu":
-                            if show_error:
-                                print("Debes de contestar con las opciones anteriores")
-                            lista2=input("¿De qué tema quieres saber?\n-cara\n-cuerpo\
-                         \nRespuesta: ").lower()
-                            time.sleep(4)
-                            limpiar_pantalla()
-                            
-                            if lista2 == cara:
-                                #Lista de la c=acné,d=rosácea,e)hidratación,f=exfoliación,g=rejuvecimiento
-                                    while True:
-                                        trata=input("\n¿Quiéres saber sobre?\
-                                        \nacné\nrosácea\nhidratación\nexfoliación\nrejuvecimiento\
-                                        \nSi quieres regresar al menu anterior ingresa sub menu \
-                                        \n¿Cuál es tu elección?\
-                                        \n").lower()
-                                        time.sleep(4)
-                                        limpiar_pantalla()
-                                        #Definición acné
-                                        if trata == submenu:
-                                            break
-                                        
-                                        elif trata==acne:
-                                            completo_acne()
-                                            show_error=False
-                                            break 
+                    if lista2=="salir":
+                        exit()
 
-                                        elif trata==rosacea:
-                                            trata_rosacea()
-                                            show_error=False
-                                            break
-
-                                        #hidratación
-                                        elif trata==hidratacion:
-                                            trata_hidratación()
-                                            limpiar_pantalla()
-                                            show_error=False   
-                                            break                     
-
-                                        elif trata==exfoliacion:
-                                            exfoliación_info()
-                                            show_error=False
-                                            break
-                                        elif trata==rejuvecimiento:
-                                            trata_rejuvecimiento()
-                                            show_error=False
-                                            break
-
-                                        else:
-                                            show_error=True
-                                            break
-                                        
-                                    
-                            elif lista2==cuerpo:
-                                pregunta=input("Si quieres regresar al sub menu pon 'sub menu'\nRespuesta: ")
-                                time.sleep(3)
+                    elif lista2 == cara:
+                        #Lista de la c=acné,d=rosácea,e)hidratación,f=exfoliación,g=rejuvecimiento
+                            while True:
+                                trata=input("\n¿Quiéres saber sobre?\
+                                \nacné\nrosácea\nhidratación\nexfoliación\nrejuvecimiento\
+                                \nSi quieres regresar al menu anterior ingresa sub menu \
+                                \nSi quieres salir del código pon 'salir'\
+                                \n¿Cuál es tu elección?\
+                                \n").lower()
+                                time.sleep(4)
                                 limpiar_pantalla()
-                                if pregunta==submenu:
+                                #Definición acné
+                                if trata == "submenu":
                                     break
-                                else:
-                                    cuerpo_info()
+                                elif trata=="salir":
+                                    exit()
+                                elif trata==acne:
+                                    completo_acne()
                                     show_error=False
+                                    continue 
+
+                                elif trata==rosacea:
+                                    trata_rosacea()
+                                    show_error=False
+                                    continue
+
+                                #hidratación
+                                elif trata==hidratacion:
+                                    trata_hidratación()
+                                    limpiar_pantalla()
+                                    show_error=False   
+                                    continue                    
+
+                                elif trata==exfoliacion:
+                                    exfoliación_info()
+                                    show_error=False
+                                    continue
+                                elif trata==rejuvecimiento:
+                                    trata_rejuvecimiento()
+                                    show_error=False
+                                    continue
+
+                                else:
+                                    show_error=True
                                     break
+                                
+                            
+                    elif lista2==cuerpo:
+                        pregunta=input("Si quieres regresar al sub menu pon 'sub menu'. Si quieres seguir pon 'no'\
+                                        \nRespuesta: ").lower()
+                        time.sleep(1)
+                        limpiar_pantalla()
+                        if pregunta=="submenu":
+                            break
+                        else:
+                            cuerpo_info()
+                            show_error=False
+                            break
 
-                            elif lista2==menu_principal:
-                                break
+                    elif lista2==menu_principal:
+                        break
 
-                            else:
-                                show_error=True
-                                break  
+                    else:
+                        show_error=True
+                        break  
                     
                 elif lista==cuidado_cabello:
-                    menu_principal=cuidado_cabello
                     show_error==False
                     pass 
                     break

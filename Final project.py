@@ -1,6 +1,9 @@
 from strings import rosacea, hidratacion, acne, skincare, exfoliacion, rejuvenecimiento, cuerpo, cabello
 from time import sleep
 import os
+
+#El archivo de strings está en el repositorio.
+
 '''LISTAS'''
 opciones_si_no=["si","no"]
 opciones_main=["skincare", "cuidado del cabello"]
